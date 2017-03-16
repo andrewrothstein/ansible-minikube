@@ -1,0 +1,6 @@
+---
+# defaults file for minikube
+minikube_version: v0.17.1
+minikube_platform: linux-amd64
+minikube_mirror: https://storage.googleapis.com/minikube/releases
+minikube_install_dir: /usr/local/bin
