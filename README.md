@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-minikube.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-minikube)
 andrewrothstein.minikube
 =========
 

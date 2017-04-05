@@ -5,6 +5,7 @@
   get_url:
     url: '{{minikube_url}}'
     dest: '{{minikube_install_target}}'
+    checksum: '{{minikube_checksum}}'
     mode: 0755
 
 - name: link
