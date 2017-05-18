@@ -1,8 +1,8 @@
 ---
 # defaults file for minikube
-minikube_version: v0.18.0
+minikube_version: v0.19.0
 minikube_platform: linux-amd64
 minikube_checksums:
-  linux-amd64: sha256:212fbf52a6d601deb383271e2af756982f9b72715e1f7a3d65770d04387d8c8d
+  linux-amd64: sha256:1b3447b307fa256378c9541731cfc5d5b06128f88dab04b3cfc9deeeceddb2bf
 minikube_mirror: https://storage.googleapis.com/minikube/releases
 minikube_install_dir: /usr/local/bin
