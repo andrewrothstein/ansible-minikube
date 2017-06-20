@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-minikube.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-minikube)
 andrewrothstein.minikube
 =========
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-minikube.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-minikube)
 
 Installs [Minikube](https://github.com/kubernetes/minikube)
 
