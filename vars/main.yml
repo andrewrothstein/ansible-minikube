@@ -1,6 +1,6 @@
 ---
 # vars file for minikube
-# https://storage.googleapis.com/minikube/releases/v0.19.0/minikube-linux-amd64
+# https://storage.googleapis.com/minikube/releases/v0.19.1/minikube-linux-amd64
 minikube_exe: minikube-{{minikube_platform}}
 minikube_url: '{{minikube_mirror}}/{{minikube_version}}/{{minikube_exe}}'
 minikube_checksum: '{{minikube_checksums[minikube_platform]}}'
