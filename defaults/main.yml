@@ -2,6 +2,7 @@
 # defaults file for minikube
 minikube_version: v0.20.0
 minikube_platform: linux-amd64
+# SHAs available from https://github.com/kubernetes/minikube/releases/tag/v0.20.0
 minikube_checksums:
   darwin-amd64: sha256:c09b3ff9045a9b4c2bc9dab85b981f7846b77417bcfeb3248fc50cd985a5c5fe
   linux-amd64: sha256:804cc26ac40542314d0076a3818333010bb5a6d1c57873854ca566a18dede080
