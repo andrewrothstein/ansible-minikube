@@ -3,6 +3,8 @@
 minikube_version: v0.20.0
 minikube_platform: linux-amd64
 minikube_checksums:
+  darwin-amd64: sha256:c09b3ff9045a9b4c2bc9dab85b981f7846b77417bcfeb3248fc50cd985a5c5fe
   linux-amd64: sha256:804cc26ac40542314d0076a3818333010bb5a6d1c57873854ca566a18dede080
+  windows-amd64: sha256:f43deb5a63ca3402a9bdd7032cf050629cb0128a78e4e6a93637cffbbdf81203
 minikube_mirror: https://storage.googleapis.com/minikube/releases
 minikube_install_dir: /usr/local/bin
