@@ -1,11 +1,11 @@
 ---
 # defaults file for minikube
-minikube_version: v0.20.0
+minikube_version: v0.20.1
 minikube_platform: linux-amd64
-# SHAs available from https://github.com/kubernetes/minikube/releases/tag/v0.20.0
+# SHAs available from https://github.com/kubernetes/minikube/releases/tag/v0.21.0
 minikube_checksums:
-  darwin-amd64: sha256:c09b3ff9045a9b4c2bc9dab85b981f7846b77417bcfeb3248fc50cd985a5c5fe
-  linux-amd64: sha256:804cc26ac40542314d0076a3818333010bb5a6d1c57873854ca566a18dede080
-  windows-amd64: sha256:f43deb5a63ca3402a9bdd7032cf050629cb0128a78e4e6a93637cffbbdf81203
+  darwin-amd64: sha256:2a6960cfa2b5aed9fec8d8cbe357fa8f5776761ee5efa3dd26abccc894f4b453
+  linux-amd64: sha256:c5dc6e8d85f96d4bfba321bdca93b2a828a714162653a55a9b3a6d527f517e82
+  windows-amd64: sha256:ef6f5566eca0c20bc87391c0cd6e7103d6e3c6a05211ed6157ed143f9b956686
 minikube_mirror: https://storage.googleapis.com/minikube/releases
 minikube_install_dir: /usr/local/bin
