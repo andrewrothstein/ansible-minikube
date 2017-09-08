@@ -19,10 +19,17 @@ galaxy_info:
     - name: Alpine
       versions:
         - all
+    - name: Archlinux
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
   galaxy_tags:
     - k8s
     - virtualization
 
 dependencies:
   - role: andrewrothstein.kubectl
-    version: v1.0.15
+    version: v1.0.17
