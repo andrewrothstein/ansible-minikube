@@ -1,6 +1,5 @@
 ---
 # vars file for minikube
-# https://github.com/kubernetes/minikube/releases/download/v0.21.0/minikube-darwin-amd64
 minikube_exe: minikube-{{minikube_platform}}
 minikube_url: '{{minikube_mirror}}/{{minikube_version}}/{{minikube_exe}}'
 minikube_checksum: '{{minikube_checksums[minikube_version][minikube_platform]}}'
