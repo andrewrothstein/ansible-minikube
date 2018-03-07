@@ -15,3 +15,7 @@
     src: '{{minikube_install_target}}'
     dest: '{{minikube_install_dir}}/minikube'
     state: link
+
+- name: install drivers...
+  with_items: '{{minikube_install_drivers|default([])}}'
+  include_tasks: '{{item}}.yml'
