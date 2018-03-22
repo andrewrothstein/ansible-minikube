@@ -32,4 +32,4 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.kubectl
-    version: v1.1.6
+    version: v1.1.7
