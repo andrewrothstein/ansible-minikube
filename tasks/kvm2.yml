@@ -27,13 +27,13 @@
   become_user: root
   get_url:
     url: '{{minikube_kvm2_driver_url}}'
-    dest: /usr/local/bin/docker-machine-driver-kvm2-{{minikube_kvm2_driver_ver}}
+    dest: /usr/local/bin/docker-machine-driver-kvm2-{{minikube_version}}
     mode: 0755
 
 - name: link installed docker-machine-driver-kvm2
   become: yes
   become_user: root
   file:
-    src: /usr/local/bin/docker-machine-driver-kvm2-{{minikube_kvm2_driver_ver}}
+    src: /usr/local/bin/docker-machine-driver-kvm2-{{minikube_version}}
     dest: /usr/local/bin/docker-machine-driver-kvm2
     state: link

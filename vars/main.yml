@@ -5,4 +5,4 @@ minikube_url: '{{minikube_mirror}}/{{minikube_version}}/{{minikube_exe}}'
 minikube_checksum: '{{minikube_checksums[minikube_version][minikube_platform]}}'
 minikube_install_target: '{{minikube_install_dir}}/{{minikube_exe}}-{{minikube_version}}'
 
-minikube_kvm2_driver_url: '{{minikube_kvm2_mirror}}/{{minikube_kvm2_driver_ver}}/docker-machine-driver-kvm2'
+minikube_kvm2_driver_url: '{{minikube_mirror}}/{{minikube_version}}/docker-machine-driver-kvm2'

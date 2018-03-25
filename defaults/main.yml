@@ -32,10 +32,6 @@ minikube_checksums:
 minikube_mirror: https://github.com/kubernetes/minikube/releases/download
 minikube_install_dir: /usr/local/bin
 
-# defaults for the kvm2 plugin
-minikube_kvm2_mirror: https://storage.googleapis.com/minikube/releases
-minikube_kvm2_driver_ver: latest
-
 # install drivers (currently only kvm2 -- PRs accepted)
 #minikube_install_drivers:
 #  - kvm2
