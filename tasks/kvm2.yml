@@ -15,7 +15,7 @@
 - name: install kvm2 OS pkg dependencies
   become: yes
   become_user: root
-  with_items: '{{minikube_kvm2_pkgs}}'
+  with_items: '{{minikube_kvm2_pkgs|default([])}}'
   loop_control:
     loop_var: kvm2_pkg
   package:
