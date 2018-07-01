@@ -11,6 +11,7 @@
         - '{{role_path}}/vars'
   loop_control:
     loop_var: kvm_vars
+  when: minikube_kvm2_pkgs is undefined
 
 - name: install kvm2 OS pkg dependencies
   become: yes
