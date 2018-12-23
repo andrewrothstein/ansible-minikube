@@ -1,14 +1,14 @@
 ---
 - name: resolve platform specific vars
-  include_vars: '{{kvm_vars}}'
+  include_vars: '{{ kvm_vars }}'
   with_first_found:
     - files:
-        - '{{ansible_distribution}}-{{ansible_distribution_release}}.yml'
-        - '{{ansible_distribution}}.yml'
-        - '{{ansible_os_family}}.yml'
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
       skip: true
       paths:
-        - '{{role_path}}/vars'
+        - '{{ role_path }}/vars'
   loop_control:
     loop_var: kvm_vars
   when: minikube_kvm2_pkgs is undefined
@@ -16,25 +16,25 @@
 - name: install kvm2 OS pkg dependencies
   become: yes
   become_user: root
-  with_items: '{{minikube_kvm2_pkgs|default([])}}'
+  with_items: '{{ minikube_kvm2_pkgs|default([]) }}'
   loop_control:
     loop_var: kvm2_pkg
   package:
-    name: '{{kvm2_pkg}}'
+    name: '{{ kvm2_pkg }}'
     state: present
   
 - name: download docker-machine-driver-kvm2
   become: yes
   become_user: root
   get_url:
-    url: '{{minikube_kvm2_driver_url}}'
-    dest: /usr/local/bin/docker-machine-driver-kvm2-{{minikube_version}}
+    url: '{{ minikube_kvm2_driver_url }}'
+    dest: /usr/local/bin/docker-machine-driver-kvm2-{{ minikube_version }}
     mode: 0755
 
 - name: link installed docker-machine-driver-kvm2
   become: yes
   become_user: root
   file:
-    src: /usr/local/bin/docker-machine-driver-kvm2-{{minikube_version}}
+    src: /usr/local/bin/docker-machine-driver-kvm2-{{ minikube_version }}
     dest: /usr/local/bin/docker-machine-driver-kvm2
     state: link
