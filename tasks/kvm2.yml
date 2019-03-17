@@ -22,7 +22,7 @@
   package:
     name: '{{ kvm2_pkg }}'
     state: present
-  
+
 - name: download docker-machine-driver-kvm2
   become: yes
   become_user: root
