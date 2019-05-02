@@ -6,7 +6,7 @@ services:
   - docker
 
 language: python
-python: 3.5
+python: 3.7
 
 branches:
   except:
@@ -19,6 +19,7 @@ env:
   - OS=alpine_3.6
   - OS=alpine_3.7
   - OS=alpine_3.8
+  - OS=alpine_3.9
   - OS=alpine_edge
   - OS=archlinux_latest
   - OS=centos_7
@@ -35,11 +36,8 @@ env:
   - OS=ubuntu_xenial
   - OS=ubuntu_bionic
 
-before_install:
-  - pip install ansible-galaxy-local-deps dcb==0.0.16
-  - ansible-galaxy-local-deps-write
-
 script:
+  - ansible-galaxy-local-deps-write
   - >-
     dcb
     --upstreamgroup andrewrothstein

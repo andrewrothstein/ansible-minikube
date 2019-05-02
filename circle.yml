@@ -6,7 +6,7 @@ machine:
 dependencies:
   pre:
     - sudo -H pip install --upgrade pip
-    - sudo -H pip install circleci-helpers ansible-galaxy-local-deps dcb==0.0.16
+    - sudo -H pip install circleci-helpers ansible-galaxy-local-deps dcb==0.0.17
     - ansible-galaxy-local-deps-write
 
 test:
@@ -20,6 +20,7 @@ test:
               - OS=alpine_3.6
               - OS=alpine_3.7
               - OS=alpine_3.8
+              - OS=alpine_3.9
               - OS=alpine_edge
               - OS=archlinux_latest
               - OS=centos_7
