@@ -4,3 +4,4 @@
     - role: '{{playbook_dir}}'
       minikube_install_drivers:
         - kvm2
+        - hyperkit

@@ -1,8 +1,15 @@
 ---
 # defaults file for minikube
-minikube_version: v1.0.1
+minikube_version: v1.1.0
 minikube_platform: linux-amd64
 minikube_checksums:
+  v1.1.0:
+    # https://github.com/kubernetes/minikube/releases/download/v1.1.0/minikube-linux-amd64.sha256
+    linux-amd64: sha256:43ce88a10c7b57f5e4f83e5a1485e13e4ad537bfb20f7d57364f66450b872634
+    # https://github.com/kubernetes/minikube/releases/download/v1.1.0/minikube-darwin-amd64.sha256
+    darwin-amd64: sha256:3f635089d93ba7bd193b8f015bfa9434b810256daa8ced03816c7f0df7b06a96
+    # https://github.com/kubernetes/minikube/releases/download/v1.1.0/minikube-windows-amd64.exe.sha256
+    windows-amd64: sha256:2a8e95fbe4ec9b32c603767f16b731b5f09ddd04c3e43f6bbe7fffd22afbf811
   v0.23.0:
     # https://github.com/kubernetes/minikube/releases/tag/v0.23.0
     darwin-amd64: sha256:3d0c5581cd14f85637fb888c1e2e124152c4c9643a257ba90c8cd929d2c2b8b3
@@ -105,3 +112,11 @@ minikube_install_dir: /usr/local/bin
 # install drivers (currently only kvm2 -- PRs accepted)
 #minikube_install_drivers:
 #  - kvm2
+
+minikube_driver_kvm2_checksums:
+  # https://github.com/kubernetes/minikube/releases/download/v1.1.0/docker-machine-driver-kvm2.sha256
+  v1.1.0: sha256:98fd0d9947da473667adcb2e0615f95eb781e31e4870a4b4eea29aa15cce3b11
+minikube_driver_hyperkit_checksums:
+  # https://github.com/kubernetes/minikube/releases/download/v1.1.0/docker-machine-driver-hyperkit.sha256
+  v1.1.0: sha256:724644c1c0e55fe34fe676514d0fa525a54ca03b258345af08479376a43b77b9
+

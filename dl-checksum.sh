@@ -1,17 +1,35 @@
 #!/usr/bin/env sh
-VER=v1.0.1
+VER=v1.1.0
 DIR=~/Downloads
 MIRROR=https://github.com/kubernetes/minikube/releases/download/$VER
 
-dl()
+dl_minikube()
 {
     OS=$1
     PLATFORM=$2
-    wget -O $DIR/minikube-$VER-$OS-$PLATFORM $MIRROR/minikube-$OS-$PLATFORM
+    SUFFIX=$3
+    OP="${OS}-${PLATFORM}${SUFFIX}"
+    URL=$MIRROR/minikube-${OP}.sha256
+    printf "  # ${URL}\n"
+    printf "  ${OS}-${PLATFORM}: sha256:%s\n" `curl -sSL $URL | awk '{print $1}'`
 }
 
-dl linux amd64
-dl darwin amd64
-dl windows amd64
-sha256sum $DIR/minikube-$VER-*
+dl_driver()
+{
+    DRIVER_NAME=$1
+    FILE_NAME=docker-machine-driver-$DRIVER_NAME.sha256
+    URL=$MIRROR/$FILE_NAME
+    printf "minikube_driver_$DRIVER_NAME_checksums:\n"
+    printf "  # ${URL}\n"
+    printf "  $VER: sha256:%s\n" `curl -sSL $URL | awk '{print $1}'`
+}
+
+printf "$VER:\n"
+dl_minikube linux amd64
+dl_minikube darwin amd64
+dl_minikube windows amd64 .exe
+
+dl_driver kvm2
+dl_driver hyperkit
+
 

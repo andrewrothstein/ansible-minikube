@@ -1,0 +1,41 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ hyperkit_vars }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+  loop_control:
+    loop_var: hyperkit_vars
+  when: minikube_hyperkit_pkgs is undefined
+
+- name: install hyperkit OS pkg dependencies
+  become: yes
+  become_user: root
+  with_items: '{{ minikube_hyperkit_pkgs|default([]) }}'
+  loop_control:
+    loop_var: hyperkit_pkg
+  package:
+    name: '{{ hyperkit_pkg }}'
+    state: present
+
+- name: download docker-machine-driver-hyperkit
+  become: yes
+  become_user: root
+  get_url:
+    url: '{{ minikube_hyperkit_driver_url }}'
+    dest: '{{ minikube_install_dir }}/{{ minikube_hyperkit_name }}-{{ minikube_version }}'
+    checksum: '{{ minikube_hyperkit_checksum }}'
+    mode: 0755
+
+- name: link installed docker-machine-driver-hyperkit
+  become: yes
+  become_user: root
+  file:
+    src: '{{ minikube_install_dir }}/{{ minikube_hyperkit_name }}-{{ minikube_version }}'
+    dest: '{{ minikube_install_dir }}/{{ minikube_hyperkit_name }}'
+    state: link

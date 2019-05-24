@@ -5,4 +5,10 @@ minikube_url: '{{ minikube_mirror }}/{{ minikube_version }}/{{ minikube_exe }}'
 minikube_checksum: '{{ minikube_checksums[minikube_version][minikube_platform] }}'
 minikube_install_target: '{{ minikube_install_dir }}/{{ minikube_exe }}-{{ minikube_version }}'
 
-minikube_kvm2_driver_url: '{{ minikube_mirror }}/{{ minikube_version }}/docker-machine-driver-kvm2'
+minikube_kvm2_name: docker-machine-driver-kvm2
+minikube_kvm2_driver_url: '{{ minikube_mirror }}/{{ minikube_version }}/{{ minikube_kvm2_name }}'
+minikube_kvm2_checksum: '{{ minikube_driver_kvm_checksums[minikube_version] }}'
+
+minikube_hyperkit_name: docker-machine-driver-hyperkit
+minikube_hyperkit_driver_url: '{{ minikube_mirror }}/{{minikube_version }}/{{ minikube_hyperkit_name }}'
+minikube_hyperkit_checksum: '{{ minikube_driver_hyperkit_checksums[minikube_version] }}'
