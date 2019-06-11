@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=v1.1.0
+VER=v1.1.1
 DIR=~/Downloads
 MIRROR=https://github.com/kubernetes/minikube/releases/download/$VER
 
@@ -19,7 +19,7 @@ dl_driver()
     DRIVER_NAME=$1
     FILE_NAME=docker-machine-driver-$DRIVER_NAME.sha256
     URL=$MIRROR/$FILE_NAME
-    printf "minikube_driver_$DRIVER_NAME_checksums:\n"
+    printf "minikube_driver_${DRIVER_NAME}_checksums:\n"
     printf "  # ${URL}\n"
     printf "  $VER: sha256:%s\n" `curl -sSL $URL | awk '{print $1}'`
 }
