@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=v1.1.1
+VER=v1.2.0
 DIR=~/Downloads
 MIRROR=https://github.com/kubernetes/minikube/releases/download/$VER
 
@@ -31,5 +31,3 @@ dl_minikube windows amd64 .exe
 
 dl_driver kvm2
 dl_driver hyperkit
-
-

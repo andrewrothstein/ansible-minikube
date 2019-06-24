@@ -1,8 +1,15 @@
 ---
 # defaults file for minikube
-minikube_version: v1.1.1
+minikube_version: v1.2.0
 minikube_platform: linux-amd64
 minikube_checksums:
+  v1.2.0:
+    # https://github.com/kubernetes/minikube/releases/download/v1.2.0/minikube-linux-amd64.sha256
+    linux-amd64: sha256:123fc9f5656333fb2927cf91666a91cd5b28ef97503418ac2a90a2109e518ed9
+    # https://github.com/kubernetes/minikube/releases/download/v1.2.0/minikube-darwin-amd64.sha256
+    darwin-amd64: sha256:183d017d094b7783c938dc709dbdfc9a48f92299178234f89047dfbb083a592c
+    # https://github.com/kubernetes/minikube/releases/download/v1.2.0/minikube-windows-amd64.exe.sha256
+    windows-amd64: sha256:f6c30cb88ec61bc6fe17532a3ef56e4f1fcef2473e3d73fc56f352b44784490d
   v1.1.1:
     # https://github.com/kubernetes/minikube/releases/download/v1.1.1/minikube-linux-amd64.sha256
     linux-amd64: sha256:4596c0daabfe637912e2372c41cc11116ca053a1f7045af8a731265e45f9ca83
@@ -125,9 +132,13 @@ minikube_driver_kvm2_checksums:
   v1.1.0: sha256:98fd0d9947da473667adcb2e0615f95eb781e31e4870a4b4eea29aa15cce3b11
   # https://github.com/kubernetes/minikube/releases/download/v1.1.1/docker-machine-driver-kvm2.sha256
   v1.1.1: sha256:e10090e1639e8f05764b19e59e3a7620d1c176cdf83f02194ac1b442a28caad1
+  # https://github.com/kubernetes/minikube/releases/download/v1.2.0/docker-machine-driver-kvm2.sha256
+  v1.2.0: sha256:c0761423a91826d8c4e29c65007209fbd94c7d3d1aa6693d8a72429e9746e962
 
 minikube_driver_hyperkit_checksums:
   # https://github.com/kubernetes/minikube/releases/download/v1.1.0/docker-machine-driver-hyperkit.sha256
   v1.1.0: sha256:724644c1c0e55fe34fe676514d0fa525a54ca03b258345af08479376a43b77b9
   # https://github.com/kubernetes/minikube/releases/download/v1.1.1/docker-machine-driver-hyperkit.sha256
   v1.1.1: sha256:e27a5da277690d7c20428a06a5a7c196b499c298ffb55b2485e2ff4294f6afd7
+  # https://github.com/kubernetes/minikube/releases/download/v1.2.0/docker-machine-driver-hyperkit.sha256
+  v1.2.0: sha256:2c7cc582efbb6a116d3224d64a7a39c2d28b21d221f6f0fe022f9b3c52de6412
