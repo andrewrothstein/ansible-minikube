@@ -29,7 +29,8 @@ galaxy_info:
   galaxy_tags:
     - k8s
     - virtualization
+  role_name: minikube
 
 dependencies:
   - role: andrewrothstein.kubectl
-    version: v1.1.22
+    version: v1.1.24
