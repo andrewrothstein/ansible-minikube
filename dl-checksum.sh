@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=v1.3.0
+VER=v1.3.1
 DIR=~/Downloads
 MIRROR=https://github.com/kubernetes/minikube/releases/download/$VER
 
