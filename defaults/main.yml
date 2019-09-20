@@ -1,8 +1,15 @@
 ---
 # defaults file for minikube
-minikube_version: v1.3.1
+minikube_version: v1.4.0
 minikube_platform: linux-amd64
 minikube_checksums:
+  v1.4.0:
+    # https://github.com/kubernetes/minikube/releases/download/v1.4.0/minikube-linux-amd64.sha256
+    linux-amd64: sha256:e63b8007c2d39fd037587adff2ec5360a910b51f427f0d1521fce5f3cac5e0fd
+    # https://github.com/kubernetes/minikube/releases/download/v1.4.0/minikube-darwin-amd64.sha256
+    darwin-amd64: sha256:ae19f66c8f4a5716a1c22125af1bcf3d41d1b81cfa5fe7fc76a50c0c46e2c409
+    # https://github.com/kubernetes/minikube/releases/download/v1.4.0/minikube-windows-amd64.exe.sha256
+    windows-amd64: sha256:cd77fbe1b5892de2697161483f44f4ef6833c1418b53e913c2edef3ac95e7475
   v1.3.1:
     # https://github.com/kubernetes/minikube/releases/download/v1.3.1/minikube-linux-amd64.sha256
     linux-amd64: sha256:057a4f4ca36ff51ecad59509d94d3694543b874949e805e2b79792ceef21f983
@@ -152,6 +159,8 @@ minikube_driver_kvm2_checksums:
   v1.3.0: sha256:30cc73595f9e2d57309b55f357b71ee162dc0347b2797a965cab0fdf23b42e75
   # https://github.com/kubernetes/minikube/releases/download/v1.3.1/docker-machine-driver-kvm2.sha256
   v1.3.1: sha256:cdbe42a44b927d2bbc8237b6f5ceb30b9a3be6af0ac0955a1f36a22358e7cb69
+  # https://github.com/kubernetes/minikube/releases/download/v1.4.0/docker-machine-driver-kvm2.sha256
+  v1.4.0: sha256:e9f3c84413beeebe1b4e082193c960efe2f0f80d06672fc87d14bfce8e62aa2f
 
 minikube_driver_hyperkit_checksums:
   # https://github.com/kubernetes/minikube/releases/download/v1.1.0/docker-machine-driver-hyperkit.sha256
@@ -164,3 +173,5 @@ minikube_driver_hyperkit_checksums:
   v1.3.0: sha256:7ec51ff3bac76c5ab8a6c38752d13f714ea32e3c6655cbf4590f2e58b3adcafb
   # https://github.com/kubernetes/minikube/releases/download/v1.3.1/docker-machine-driver-hyperkit.sha256
   v1.3.1: sha256:b6a54b465f6e6c709229ce68d95742771c470183e56a52133b875befadd510bb
+  # https://github.com/kubernetes/minikube/releases/download/v1.4.0/docker-machine-driver-hyperkit.sha256
+  v1.4.0: sha256:0e8188da8125145b14ca4ad2da0764cf26c9c329ccc21b9039ef4415ecddef88

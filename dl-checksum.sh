@@ -1,27 +1,28 @@
 #!/usr/bin/env sh
-VER=v1.3.1
+VER=${1:-v1.4.0}
 DIR=~/Downloads
 MIRROR=https://github.com/kubernetes/minikube/releases/download/$VER
 
 dl_minikube()
 {
-    OS=$1
-    PLATFORM=$2
-    SUFFIX=$3
-    OP=${OS}-${PLATFORM}${SUFFIX}
-    URL=$MIRROR/minikube-${OP}.sha256
-    printf "    # %s\n" $URL
-    printf "    %s-%s: sha256:%s\n" $OS $PLATFORM `curl -sSL $URL | awk '{print $1}'`
+    local os=$1
+    local arch=$2
+    local suffix=$3
+    local platform=${os}-${arch}
+    local qsuffix=${platform}${suffix}
+    local url=$MIRROR/minikube-${qsuffix}.sha256
+    printf "    # %s\n" $url
+    printf "    %s: sha256:%s\n" $platform `curl -sSL $url | awk '{print $1}'`
 }
 
 dl_driver()
 {
-    DRIVER_NAME=$1
-    FILE_NAME=docker-machine-driver-$DRIVER_NAME.sha256
-    URL=$MIRROR/$FILE_NAME
-    printf "minikube_driver_%s_checksums:\n" $DRIVER_NAME
-    printf "  # %s\n" $URL
-    printf "  %s: sha256:%s\n" $VER `curl -sSL $URL | awk '{print $1}'`
+    local driver_name=$1
+    local file_name=docker-machine-driver-$driver_name.sha256
+    local url=$MIRROR/$file_name
+    printf "minikube_driver_%s_checksums:\n" $driver_name
+    printf "  # %s\n" $url
+    printf "  %s: sha256:%s\n" $VER `curl -sSL $url | awk '{print $1}'`
 }
 
 printf "  %s:\n" $VER
