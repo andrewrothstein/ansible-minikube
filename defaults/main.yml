@@ -227,7 +227,7 @@ minikube_checksums:
     darwin-amd64: sha256:cbd1ff4dd239180b417bcd496fe0a31dbe8f212586765c040fdd20991ca13d50
     # https://github.com/kubernetes/minikube/releases/download/v1.8.2/minikube-windows-amd64.exe.sha256
     windows-amd64: sha256:076ccf11e8238647101e26d327adb0880fdac63cbd6e12bd0bb1420f09a85b9c
-   v1.9.0:
+  v1.9.0:
     # https://github.com/kubernetes/minikube/releases/download/v1.9.0/minikube-linux-amd64.sha256
     linux-amd64: sha256:81d77d1babe63be393e0a3204aac7825eb35e0fdf58ffefd9f66508a43864866
     # https://github.com/kubernetes/minikube/releases/download/v1.9.0/minikube-darwin-amd64.sha256
