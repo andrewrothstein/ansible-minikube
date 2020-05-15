@@ -1,6 +1,6 @@
 ---
 # defaults file for minikube
-minikube_version: v1.9.2
+minikube_version: v1.10.1
 minikube_os: linux
 minikube_arch: amd64
 
@@ -241,6 +241,13 @@ minikube_checksums:
     darwin-amd64: sha256:f27016246850b3145e1509e98f7ed060fd9575ac4d455c7bdc15277734372e85
     # https://github.com/kubernetes/minikube/releases/download/v1.9.2/minikube-windows-amd64.exe.sha256
     windows-amd64: sha256:426586f33d88a484fdc5a3b326b0651d57860e9305a4f9d4180640e3beccaf6b
+  v1.10.1:
+    # https://github.com/kubernetes/minikube/releases/download/v1.10.1/minikube-linux-amd64.sha256
+    linux-amd64: sha256:acc67ea2ff1ca261269a702a6d998367f65c86d9024c20bbf5ac3922bfca1aaa
+    # https://github.com/kubernetes/minikube/releases/download/v1.10.1/minikube-darwin-amd64.sha256
+    darwin-amd64: sha256:9c51656f6855b4dff9a6f0bf1136255c18bc07c467ff67b32257da921e879246
+    # https://github.com/kubernetes/minikube/releases/download/v1.10.1/minikube-windows-amd64.exe.sha256
+    windows-amd64: sha256:60d4db87a834509a69b70ac253de040eabfb9e96aaf3cee159f73c3d5f37e81a
 minikube_driver_kvm2_checksums:
   # https://github.com/kubernetes/minikube/releases/download/v1.1.0/docker-machine-driver-kvm2.sha256
   v1.1.0: sha256:98fd0d9947da473667adcb2e0615f95eb781e31e4870a4b4eea29aa15cce3b11
@@ -280,6 +287,8 @@ minikube_driver_kvm2_checksums:
   v1.9.0: sha256:5e399ab8849e00e60918eb4d9fa40b000eb649f614d6fcc066efbba8d7f2c39d
   # https://github.com/kubernetes/minikube/releases/download/v1.9.2/docker-machine-driver-kvm2.sha256
   v1.9.2: sha256:4f75e89a915160e74b2b5ed681468b887af8fe40c3da121a41682bfab152d35f
+  # https://github.com/kubernetes/minikube/releases/download/v1.10.1/docker-machine-driver-kvm2.sha256
+  v1.10.1: sha256:9528d78eea065165edfd3173aea4b8e338ce6c001505b18b19231121fad37492
 
 minikube_driver_hyperkit_checksums:
   # https://github.com/kubernetes/minikube/releases/download/v1.1.0/docker-machine-driver-hyperkit.sha256
@@ -320,3 +329,5 @@ minikube_driver_hyperkit_checksums:
   v1.9.0: sha256:30d9f86242c335edd26c95acb2fc5e2138cc15254c399dd84836944f926e9952
   # https://github.com/kubernetes/minikube/releases/download/v1.9.2/docker-machine-driver-hyperkit.sha256
   v1.9.2: sha256:588ddd18927482730c860d6eab0402f832075330955bcbfce5849f80e841c308
+  # https://github.com/kubernetes/minikube/releases/download/v1.10.1/docker-machine-driver-hyperkit.sha256
+  v1.10.1: sha256:b11fcfa9c8d1e71226c848b4e4f67e33d69dae9ab76eace11f101b3b218d57ed
