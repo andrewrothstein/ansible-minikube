@@ -1,5 +1,5 @@
-- alpine_3.10
 - alpine_3.11
+- alpine_3.12
 - alpine_edge
 - archlinux_latest
 - centos_7
@@ -9,4 +9,5 @@
 - fedora_31
 - fedora_32
 - ubuntu_bionic
+- ubuntu_focal
 - ubuntu_xenial

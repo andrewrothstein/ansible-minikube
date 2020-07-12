@@ -7,15 +7,6 @@ galaxy_info:
     - MIT
   min_ansible_version: 2.4
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
     - name: Alpine
       versions:
         - all
@@ -24,8 +15,21 @@ galaxy_info:
         - all
     - name: Debian
       versions:
-        - jessie
+        - buster
         - stretch
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Fedora
+      versions:
+        - 31
+        - 32
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+        - xenial
   galaxy_tags:
     - k8s
     - virtualization
@@ -33,4 +37,4 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.kubectl
-    version: v1.1.39
+    version: v1.1.41
