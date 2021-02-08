@@ -38,4 +38,4 @@ dl_ver() {
     dl_driver $ver hyperkit
 }
 
-dl_ver ${1:-v1.16.0}
+dl_ver ${1:-v1.17.1}
