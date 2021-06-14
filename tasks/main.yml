@@ -1,5 +1,5 @@
 ---
-- name: download
+- name: downloading {{ minikube_url }}
   become: yes
   become_user: root
   get_url:
@@ -8,14 +8,14 @@
     checksum: '{{ minikube_checksum }}'
     mode: 0755
 
-- name: link
+- name: linking {{ minikube_install_link }} to {{ minikube_install_target }}
   become: yes
   become_user: root
   file:
     src: '{{ minikube_install_target }}'
-    dest: '{{ minikube_install_dir }}/minikube'
+    dest: '{{ minikube_install_link }}'
     state: link
 
-- name: install drivers...
-  with_items: '{{ minikube_install_drivers|default([]) }}'
+- name: installing drivers...
+  with_items: '{{ minikube_install_drivers | default([]) }}'
   include_tasks: '{{ item }}.yml'
