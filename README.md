@@ -1,6 +1,7 @@
 andrewrothstein.minikube
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-minikube.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-minikube)
+![Build Status](https://github.com/andrewrothstein/ansible-minikube/actions/workflows/build.yml/badge.svg)
+
 
 Installs [Minikube](https://github.com/kubernetes/minikube)
 
