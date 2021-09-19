@@ -5,3 +5,9 @@
       minikube_install_drivers:
         - kvm2
         - hyperkit
+  tasks:
+    - command: /usr/local/bin/minikube version
+      register: minikube_test_output
+    - name: minikube version
+      debug:
+        msg: '{{ minikube_test_output.stdout }}'
