@@ -35,4 +35,6 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.kubectl
-    version: v1.1.64
+    version: v1.1.66
+  - role: andrewrothstein.alpine-glibc-shim
+    version: v2.0.15
