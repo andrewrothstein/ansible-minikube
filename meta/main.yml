@@ -10,9 +10,6 @@ galaxy_info:
     - name: Alpine
       versions:
         - all
-    - name: Archlinux
-      versions:
-        - all
     - name: Debian
       versions:
         - bullseye
