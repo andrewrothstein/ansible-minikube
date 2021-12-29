@@ -14,7 +14,7 @@
   when: minikube_hyperkit_pkgs is undefined
 
 - name: install hyperkit OS pkg dependencies
-  become: yes
+  become: true
   become_user: root
   with_items: '{{ minikube_hyperkit_pkgs|default([]) }}'
   loop_control:
@@ -24,7 +24,7 @@
     state: present
 
 - name: download docker-machine-driver-hyperkit
-  become: yes
+  become: true
   become_user: root
   get_url:
     url: '{{ minikube_hyperkit_driver_url }}'
@@ -33,7 +33,7 @@
     mode: 0755
 
 - name: link installed docker-machine-driver-hyperkit
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ minikube_install_dir }}/{{ minikube_hyperkit_name }}-{{ minikube_version }}'

@@ -1,6 +1,6 @@
 ---
 - name: downloading {{ minikube_url }}
-  become: yes
+  become: true
   become_user: root
   get_url:
     url: '{{ minikube_url }}'
@@ -9,7 +9,7 @@
     mode: 0755
 
 - name: linking {{ minikube_install_link }} to {{ minikube_install_target }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ minikube_install_target }}'
