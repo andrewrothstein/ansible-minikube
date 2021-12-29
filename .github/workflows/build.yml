@@ -22,8 +22,8 @@ jobs:
     strategy:
       matrix:
         os:
-        - alpine_3.13
         - alpine_3.14
+        - alpine_3.15
         - alpine_edge
         - centos_8
         - debian_bullseye
@@ -31,6 +31,7 @@ jobs:
         - fedora_34
         - fedora_35
         - rockylinux_8.4
+        - rockylinux_8.5
         - ubuntu_bionic
         - ubuntu_focal
         python-versions:
