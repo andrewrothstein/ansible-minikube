@@ -19,8 +19,8 @@ galaxy_info:
         - 8
     - name: Fedora
       versions:
-        - 34
         - 35
+        - 36
     - name: Ubuntu
       versions:
         - bionic
@@ -31,7 +31,5 @@ galaxy_info:
   role_name: minikube
 
 dependencies:
-  - role: andrewrothstein.kubectl
-    version: v1.1.70
-  - role: andrewrothstein.alpine-glibc-shim
-    version: v2.0.16
+  - andrewrothstein.kubectl
+  - andrewrothstein.alpine-glibc-shim
