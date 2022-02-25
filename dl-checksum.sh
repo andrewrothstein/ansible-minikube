@@ -12,7 +12,7 @@ dl_minikube()
     local qsuffix=${platform}${suffix}
     local url=$MIRROR/$ver/minikube-${qsuffix}.sha256
     printf "    # %s\n" $url
-    printf "    %s: sha256:%s\n" $platform `curl -sSL $url | awk '{print $1}'`
+    printf "    %s: sha256:%s\n" $platform $(curl -sSL $url | awk '{print $1}')
 }
 
 dl_driver()
@@ -23,7 +23,7 @@ dl_driver()
     local url=$MIRROR/$ver/$file_name
     printf "minikube_driver_%s_checksums:\n" $driver_name
     printf "  # %s\n" $url
-    printf "  %s: sha256:%s\n" $ver `curl -sSL $url | awk '{print $1}'`
+    printf "  %s: sha256:%s\n" $ver $(curl -sSL $url | awk '{print $1}')
 }
 
 dl_ver() {
@@ -38,4 +38,4 @@ dl_ver() {
     dl_driver $ver hyperkit
 }
 
-dl_ver ${1:-v1.25.1}
+dl_ver ${1:-v1.25.2}
