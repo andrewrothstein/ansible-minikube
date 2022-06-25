@@ -5,7 +5,7 @@ galaxy_info:
   company: BlackRock
   license:
     - MIT
-  min_ansible_version: 2.4
+  min_ansible_version: 2.6
   platforms:
     - name: Alpine
       versions:

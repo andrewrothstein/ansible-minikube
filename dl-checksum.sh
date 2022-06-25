@@ -21,7 +21,6 @@ dl_driver()
     local driver_name=$2
     local file_name=docker-machine-driver-$driver_name.sha256
     local url=$MIRROR/$ver/$file_name
-    printf "minikube_driver_%s_checksums:\n" $driver_name
     printf "  # %s\n" $url
     printf "  %s: sha256:%s\n" $ver $(curl -sSL $url | awk '{print $1}')
 }
@@ -34,8 +33,10 @@ dl_ver() {
     dl_minikube $ver darwin amd64
     dl_minikube $ver windows amd64 .exe
 
-    dl_driver $ver kvm2
-    dl_driver $ver hyperkit
 }
 
-dl_ver ${1:-v1.25.2}
+VER=${1:-v1.26.0}
+dl_ver $VER >> defaults/main/minikube_checksums.yml
+dl_driver $VER kvm2 >> defaults/main/minikube_driver_kvm2_checksums.yml
+dl_driver $VER hyperkit >> defaults/main/minikube_driver_hyperkit_checksums.yml
+

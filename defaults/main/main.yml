@@ -1,6 +1,6 @@
 ---
 # defaults file for minikube
-minikube_version: v1.25.2
+minikube_version: v1.26.0
 minikube_os: linux
 minikube_arch: amd64
 
