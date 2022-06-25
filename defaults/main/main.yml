@@ -1,0 +1,13 @@
+---
+# defaults file for minikube
+minikube_version: v1.25.2
+minikube_os: linux
+minikube_arch: amd64
+
+minikube_mirror: https://github.com/kubernetes/minikube/releases/download
+minikube_install_dir: /usr/local/bin
+
+# install drivers (currently only kvm2 and hyperkit-- PRs accepted)
+#minikube_install_drivers:
+#  - kvm2
+#  - hyperkit
