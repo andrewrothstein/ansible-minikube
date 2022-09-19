@@ -7,9 +7,6 @@ galaxy_info:
     - MIT
   min_ansible_version: 2.6
   platforms:
-    - name: Alpine
-      versions:
-        - all
     - name: Debian
       versions:
         - bullseye
@@ -17,19 +14,17 @@ galaxy_info:
     - name: EL
       versions:
         - 8
+        - 9
     - name: Fedora
       versions:
-        - 35
         - 36
+        - 37
     - name: Ubuntu
       versions:
         - bionic
         - focal
+        - jammy
   galaxy_tags:
     - k8s
     - virtualization
   role_name: minikube
-
-dependencies:
-  - andrewrothstein.kubectl
-  - andrewrothstein.alpine-glibc-shim
