@@ -1,10 +1,7 @@
 ---
 - hosts: all
   roles:
-    - role: '{{playbook_dir}}'
-      minikube_install_drivers:
-        - kvm2
-        - hyperkit
+    - role: '{{ playbook_dir }}'
   tasks:
     - command: /usr/local/bin/minikube version
       register: minikube_test_output

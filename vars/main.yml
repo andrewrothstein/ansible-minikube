@@ -1,5 +1,7 @@
 ---
 # vars file for minikube
+minikube_os: '{{ ansible_system | lower }}'
+minikube_arch: '{{ minikube_arch_map[ansible_architecture] }}'
 minikube_platform: '{{ minikube_os }}-{{ minikube_arch }}'
 minikube_exe: minikube-{{ minikube_platform }}{{ minikube_exe_suffix|default("") }}
 minikube_url: '{{ minikube_mirror }}/{{ minikube_version }}/{{ minikube_exe }}'

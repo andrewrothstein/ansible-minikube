@@ -1,13 +1,18 @@
 ---
 # defaults file for minikube
-minikube_version: v1.26.1
-minikube_os: linux
-minikube_arch: amd64
+minikube_version: v1.27.0
+minikube_arch_map:
+  armv6l: arm
+  armv7l: arm
+  aarch64: arm64
+  x86_64: amd64
+  ppc64le: ppc64le
+  s390x: s390x
 
 minikube_mirror: https://github.com/kubernetes/minikube/releases/download
 minikube_install_dir: /usr/local/bin
 
-# install drivers (currently only kvm2 and hyperkit-- PRs accepted)
+# install drivers (currently only kvm2 and hyperkit for amd64 -- PRs accepted)
 #minikube_install_drivers:
 #  - kvm2
 #  - hyperkit
