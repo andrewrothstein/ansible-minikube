@@ -461,3 +461,20 @@ minikube_checksums:
     darwin-arm64: sha256:8dc1b6018ce7ba344394e26dac62a7db477dbfcba63d9cdf55ea8e0c2fc755f4
     # https://github.com/kubernetes/minikube/releases/download/v1.28.0/minikube-windows-amd64.exe.sha256
     windows-amd64: sha256:65304e5c5c98a688fb0abc2d76d77b3b441f9501d6dfa71d96a0532f4114d34c
+  v1.29.0:
+    # https://github.com/kubernetes/minikube/releases/download/v1.29.0/minikube-linux-amd64.sha256
+    linux-amd64: sha256:aafb65cbee8e971ec00509fdb1817254b17d6bee4890b839c3b6e8f11e97413a
+    # https://github.com/kubernetes/minikube/releases/download/v1.29.0/minikube-linux-arm.sha256
+    linux-arm: sha256:9cf1c74c258f09e9133d02c371dbe0a85817c992d8dee815701c78e6fe442dcb
+    # https://github.com/kubernetes/minikube/releases/download/v1.29.0/minikube-linux-arm64.sha256
+    linux-arm64: sha256:e53bee7692b8b58144290c082c0191d50af7cc2994daf34d87e0abef9e73fae2
+    # https://github.com/kubernetes/minikube/releases/download/v1.29.0/minikube-linux-ppc64le.sha256
+    linux-ppc64le: sha256:742ba9a2867632faf7cd13c4a165081631fa93696d27ec71cfb99ed97f404362
+    # https://github.com/kubernetes/minikube/releases/download/v1.29.0/minikube-linux-s390x.sha256
+    linux-s390x: sha256:c95b67a9f8e1be02538f6b1708c32d6e8468dea0b65c338d67d04199da114e88
+    # https://github.com/kubernetes/minikube/releases/download/v1.29.0/minikube-darwin-amd64.sha256
+    darwin-amd64: sha256:cb54ef7cdbcef7f078ac2966bc6c0aa43db75bbde8b361f428858137e803dac0
+    # https://github.com/kubernetes/minikube/releases/download/v1.29.0/minikube-darwin-arm64.sha256
+    darwin-arm64: sha256:d3ba1faf5080d3c19affd7355b9e8158ee0fb1fe41422083cdd61e6f1593360d
+    # https://github.com/kubernetes/minikube/releases/download/v1.29.0/minikube-windows-amd64.exe.sha256
+    windows-amd64: sha256:c53785c02c0327e74342e7100dd2fa8a52a689c9fea7782a9a1491b5d68dbd6a
