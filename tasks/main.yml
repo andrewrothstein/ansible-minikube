@@ -1,6 +1,8 @@
 ---
 - include_role:
-    name: andrewrothstein.unarchive-deps
+    name: andrewrothstein.unarchivedeps
+- include_role:
+    name: andrewrothstein.kubectl
 - name: downloading {{ minikube_url }}
   become: true
   become_user: root

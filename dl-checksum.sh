@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 DIR=~/Downloads
 MIRROR=https://github.com/kubernetes/minikube/releases/download
 
@@ -40,7 +41,7 @@ dl_ver() {
 
 }
 
-VER=${1:-v1.30.1}
+VER=${1:-v1.31.2}
 dl_ver $VER >> defaults/main/minikube_checksums.yml
 dl_driver $VER kvm2 >> defaults/main/minikube_driver_kvm2_checksums.yml
 dl_driver $VER hyperkit >> defaults/main/minikube_driver_hyperkit_checksums.yml

@@ -1,3 +1,5 @@
 ---
+- name: andrewrothstein.unarchivedeps
+  version: 2.0.1
 - name: andrewrothstein.kubectl
-  version: v1.2.6
+  version: v1.2.13
