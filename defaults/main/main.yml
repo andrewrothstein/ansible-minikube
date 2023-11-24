@@ -1,13 +1,14 @@
 ---
 # defaults file for minikube
-minikube_version: v1.31.2
+minikube_version: v1.32.0
 minikube_arch_map:
+  aarch64: arm64
   armv6l: arm
   armv7l: arm
-  aarch64: arm64
-  x86_64: amd64
+  arm64: arm64
   ppc64le: ppc64le
   s390x: s390x
+  x86_64: amd64
 
 minikube_mirror: https://github.com/kubernetes/minikube/releases/download
 minikube_install_dir: /usr/local/bin
