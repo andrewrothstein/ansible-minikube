@@ -1,10 +1,14 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: installs minikube
   company: BlackRock
+  description: installs minikube
+  galaxy_tags:
+    - k8s
+    - virtualization
   license: MIT
-  min_ansible_version: 2.6
+  min_ansible_version: '2.6'
+  namespace: andrewrothstein
   platforms:
     - name: Debian
       versions:
@@ -12,17 +16,13 @@ galaxy_info:
         - bullseye
     - name: EL
       versions:
-        - 8
-        - 9
+        - '9'
     - name: Fedora
       versions:
-        - 37
-        - 38
+        - '38'
+        - '39'
     - name: Ubuntu
       versions:
         - focal
         - jammy
-  galaxy_tags:
-    - k8s
-    - virtualization
   role_name: minikube

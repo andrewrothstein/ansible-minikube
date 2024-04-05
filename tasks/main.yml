@@ -1,25 +1,29 @@
 ---
-- include_role:
+- name: Installing andrewrothstein.unarchivedeps
+  ansible.builtin.include_role:
     name: andrewrothstein.unarchivedeps
-- include_role:
+- name: Installing andrewrothstein.kubectl
+  ansible.builtin.include_role:
     name: andrewrothstein.kubectl
-- name: downloading {{ minikube_url }}
+- name: Downloading {{ minikube_url }}
   become: true
   become_user: root
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ minikube_url }}'
     dest: '{{ minikube_install_target }}'
     checksum: '{{ minikube_checksum }}'
-    mode: 0755
+    mode: '755'
 
-- name: linking {{ minikube_install_link }} to {{ minikube_install_target }}
+- name: Linking {{ minikube_install_link }} to {{ minikube_install_target }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ minikube_install_target }}'
     dest: '{{ minikube_install_link }}'
     state: link
 
-- name: installing drivers...
-  with_items: '{{ minikube_install_drivers | default([]) }}'
-  include_tasks: '{{ item }}.yml'
+- name: Installing drivers...
+  loop_control:
+    loop_var: driver
+  loop: '{{ minikube_install_drivers | default([]) }}'
+  ansible.builtin.include_tasks: '{{ driver }}.yml'

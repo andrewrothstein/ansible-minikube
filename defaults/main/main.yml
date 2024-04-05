@@ -14,6 +14,6 @@ minikube_mirror: https://github.com/kubernetes/minikube/releases/download
 minikube_install_dir: /usr/local/bin
 
 # install drivers (currently only kvm2 and hyperkit for amd64 -- PRs accepted)
-#minikube_install_drivers:
-#  - kvm2
-#  - hyperkit
+# minikube_install_drivers:
+#   - kvm2
+#   - hyperkit

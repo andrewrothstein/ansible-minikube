@@ -3,16 +3,22 @@
 minikube_os: '{{ ansible_system | lower }}'
 minikube_arch: '{{ minikube_arch_map[ansible_architecture] }}'
 minikube_platform: '{{ minikube_os }}-{{ minikube_arch }}'
-minikube_exe: minikube-{{ minikube_platform }}{{ minikube_exe_suffix|default("") }}
+minikube_exe: minikube-{{ minikube_platform }}{{ minikube_exe_suffix | default("") }}
 minikube_url: '{{ minikube_mirror }}/{{ minikube_version }}/{{ minikube_exe }}'
 minikube_checksum: '{{ minikube_checksums[minikube_version][minikube_platform] }}'
 minikube_install_target: '{{ minikube_install_dir }}/{{ minikube_exe }}-{{ minikube_version }}'
 minikube_install_link: '{{ minikube_install_dir }}/minikube'
 
+minikube_plugin_url_prefix: '{{ minikube_mirror }}/{{ minikube_version }}'
+
 minikube_kvm2_name: docker-machine-driver-kvm2
-minikube_kvm2_driver_url: '{{ minikube_mirror }}/{{ minikube_version }}/{{ minikube_kvm2_name }}'
+minikube_kvm2_url: '{{ minikube_plugin_url_prefix }}/{{ minikube_kvm2_name }}'
 minikube_kvm2_checksum: '{{ minikube_driver_kvm_checksums[minikube_version] }}'
+minikube_kvm2_link: '{{ minikube_install_dir }}/{{ minikube_kvm2_name }}'
+minikube_kvm2_exe: '{{ minikube_install_link }}-{{ minikube_version }}'
 
 minikube_hyperkit_name: docker-machine-driver-hyperkit
-minikube_hyperkit_driver_url: '{{ minikube_mirror }}/{{minikube_version }}/{{ minikube_hyperkit_name }}'
+minikube_hyperkit_url: '{{ minikube_plugin_url_prefix }}/{{ minikube_hyperkit_name }}'
 minikube_hyperkit_checksum: '{{ minikube_driver_hyperkit_checksums[minikube_version] }}'
+minikube_hyperkit_link: '{{ minikube_install_dir }}/{{ minikube_hyperkit_name }}'
+minikube_hyperkit_exe: '{{ minikube_install_link }}-{{ minikube_version }}'

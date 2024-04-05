@@ -1,4 +1,0 @@
----
-minikube_kvm2_pkgs:
-  - libvirt-daemon-kvm
-  - qemu-kvm

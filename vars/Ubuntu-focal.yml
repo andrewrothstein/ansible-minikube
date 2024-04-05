@@ -1,5 +1,0 @@
----
-minikube_kvm2_pkgs:
-  - libvirt-clients
-  - libvirt-daemon-system
-  - qemu-kvm

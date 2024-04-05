@@ -1,9 +1,0 @@
----
-minikube_kvm2_pkgs:
-  - libvirt
-  - qemu
-  - ebtables
-  - dnsmasq
-  - bridge-utils
-  - openbsd-netcat
-  - dmidecode
