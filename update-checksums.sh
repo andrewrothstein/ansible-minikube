@@ -41,7 +41,7 @@ dl_ver() {
 
 }
 
-VER=${1:-v1.32.0}
+VER=${1:-v1.33.0}
 dl_ver $VER >> defaults/main/minikube_checksums.yml
 dl_driver $VER kvm2 >> defaults/main/minikube_driver_kvm2_checksums.yml
 dl_driver $VER hyperkit >> defaults/main/minikube_driver_hyperkit_checksums.yml
