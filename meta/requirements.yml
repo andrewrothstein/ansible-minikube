@@ -2,6 +2,6 @@
 - name: andrewrothstein.unarchivedeps
   version: 3.0.2
 - name: andrewrothstein.kubectl
-  version: v1.3.5
+  version: v1.3.6
 - name: andrewrothstein.libvirt
   version: 1.0.0
