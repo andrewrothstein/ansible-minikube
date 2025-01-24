@@ -111,3 +111,5 @@ minikube_driver_kvm2_checksums:
   v1.33.1: sha256:784fbe2f48f7806b9f0e8ccb69f0b9f9f5dccc2b954780d6e4d067b1e88e3dae
   # https://github.com/kubernetes/minikube/releases/download/v1.34.0/docker-machine-driver-kvm2.sha256
   v1.34.0: sha256:2dfb0ba925a7f5398745d822de7e8a656a2d7b3d4e18527e7b594d2a7aac23c3
+  # https://github.com/kubernetes/minikube/releases/download/v1.35.0/docker-machine-driver-kvm2.sha256
+  v1.35.0: sha256:fdfeeadd7e65a10f347fc2d240ffe90b523e6b3af06c96b238b4ba78a075acdd
