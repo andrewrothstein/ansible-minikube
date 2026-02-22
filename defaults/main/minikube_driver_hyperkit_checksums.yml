@@ -112,3 +112,7 @@ minikube_driver_hyperkit_checksums:
   v1.34.0: sha256:f093a3e6c2dd8c9a63d39b23c16294bcdca82040464c18e8e5afc7717563c5a2
   # https://github.com/kubernetes/minikube/releases/download/v1.35.0/docker-machine-driver-hyperkit.sha256
   v1.35.0: sha256:05a9e59ffb66dc7d36c6f32c78230d21b3b59cff45fa48aa90b5f4246f9f5451
+  # https://github.com/kubernetes/minikube/releases/download/v1.36.0/docker-machine-driver-hyperkit.sha256
+  v1.36.0: sha256:b7d966f0b6187bc0ff74e9dcf2fc5a1c02c803f676ad3f0a2232e70c6fb1770c
+  # https://github.com/kubernetes/minikube/releases/download/v1.37.0/docker-machine-driver-hyperkit.sha256
+  v1.37.0: sha256:f73f6b8e81137faf5170b0829321c3b2956375a93e088579fee1704366f8177c

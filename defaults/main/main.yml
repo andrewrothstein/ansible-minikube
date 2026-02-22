@@ -1,6 +1,6 @@
 ---
 # defaults file for minikube
-minikube_version: v1.35.0
+minikube_version: v1.38.1
 minikube_arch_map:
   aarch64: arm64
   armv6l: arm

@@ -2,9 +2,9 @@
 - name: Testing andrewrothstein.minikube
   hosts: all
   vars:
-    minikube_install_drivers:
-      - kvm2
-      - hyperkit
+#    minikube_install_drivers:
+#      - kvm2
+#      - hyperkit
   roles:
     - role: '{{ playbook_dir }}'
   tasks:

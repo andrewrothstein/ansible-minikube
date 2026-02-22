@@ -10,17 +10,26 @@ galaxy_info:
   min_ansible_version: '2.6'
   namespace: andrewrothstein
   platforms:
+    - name: Alpine
+      versions:
+        - all
+    - name: ArchLinux
+      versions:
+        - all
     - name: Debian
       versions:
         - bookworm
-        - bullseye
+        - trixie
     - name: EL
       versions:
+        - '10'
         - '9'
     - name: Fedora
       versions:
-        - '39'
-        - '40'
+        - all
+    - name: Kali
+      versions:
+        - all
     - name: Ubuntu
       versions:
         - jammy
