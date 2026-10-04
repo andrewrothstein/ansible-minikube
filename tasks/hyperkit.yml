@@ -2,14 +2,17 @@
 - name: Downloading {{ minikube_hyperkit_url }} to {{ minikube_hyperkit_exe }}
   become: true
   become_user: root
+  when: minikube_version in minikube_driver_hyperkit_checksums
   ansible.builtin.get_url:
     url: '{{ minikube_hyperkit_url }}'
     dest: '{{ minikube_hyperkit_exe }}'
+    checksum: '{{ minikube_hyperkit_checksum }}'
     mode: '755'
 
 - name: Linking {{ minikube_hyperkit_link }} to {{ minikube_hyperkit_exe }}
   become: true
   become_user: root
+  when: minikube_version in minikube_driver_hyperkit_checksums
   ansible.builtin.file:
     src: '{{ minikube_hyperkit_exe }}'
     dest: '{{ minikube_hyperkit_link }}'

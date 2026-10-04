@@ -6,14 +6,17 @@
 - name: Downloading {{ minikube_kvm2_url }} to {{ minikube_kvm2_exe }}
   become: true
   become_user: root
+  when: minikube_version in minikube_driver_kvm2_checksums
   ansible.builtin.get_url:
     url: '{{ minikube_kvm2_url }}'
     dest: '{{ minikube_kvm2_exe }}'
+    checksum: '{{ minikube_kvm2_checksum }}'
     mode: '755'
 
 - name: Linking {{ minikube_kvm2_link }} to {{ minikube_kvm2_exe }}
   become: true
   become_user: root
+  when: minikube_version in minikube_driver_kvm2_checksums
   ansible.builtin.file:
     src: '{{ minikube_kvm2_exe }}'
     dest: '{{ minikube_kvm2_link }}'
