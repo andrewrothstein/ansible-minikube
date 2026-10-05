@@ -13,7 +13,7 @@ minikube_plugin_url_prefix: '{{ minikube_mirror }}/{{ minikube_version }}'
 
 minikube_kvm2_name: docker-machine-driver-kvm2
 minikube_kvm2_url: '{{ minikube_plugin_url_prefix }}/{{ minikube_kvm2_name }}'
-minikube_kvm2_checksum: '{{ minikube_driver_kvm_checksums[minikube_version] }}'
+minikube_kvm2_checksum: '{{ minikube_driver_kvm2_checksums[minikube_version] }}'
 minikube_kvm2_link: '{{ minikube_install_dir }}/{{ minikube_kvm2_name }}'
 minikube_kvm2_exe: '{{ minikube_install_link }}-{{ minikube_version }}'
 
