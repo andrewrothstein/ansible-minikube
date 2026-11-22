@@ -1,7 +1,7 @@
 ---
 - name: Testing andrewrothstein.minikube
   hosts: all
-  vars:
+#  vars:
 #    minikube_install_drivers:
 #      - kvm2
 #      - hyperkit
